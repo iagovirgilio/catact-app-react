@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
+body {
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
-}
+input {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 30px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  &:focus {
+    outline: none;
+    border-color: #4CAF50;
   }
-  to {
-    transform: rotate(360deg);
+
+  &:invalid {
+    border-color: red;
+  }
+
+  &:valid {
+    border-color: green;
+  }
+
+  &.error {
+    border-color: red;
+  }
+
+  &.success {
+    border-color: green;
+  }
+
+  &.warning {
+    border-color: orange;
+  }
+
+  &.info {
+    border-color: blue;
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+button {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  height: 30px;
+
+  &:hover {
+    background-color: #45a049;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    background-color: #3e8e41;
+  }
+
+  &.primary {
+    background-color: #2196F3;
+  }
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    min-height: 50vh;
+  }
+
+  li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+
+  li span {
+    margin-right: 20px;
+    display: inline;
   }
 }
